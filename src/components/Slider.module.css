@@ -1,0 +1,35 @@
+.slider {
+  position: relative;
+  margin-bottom: 2.6rem;
+}
+
+.slider-image {
+  max-height: 30rem;
+  display: none;
+  width: 100%;
+  object-fit: cover;
+}
+
+.slider-image.active {
+  display: block;
+}
+
+.slider-left-btn,
+.slider-right-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4rem;
+  height: 4rem;
+  left: 1.6rem;
+  background-color: var(--white);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+
+.slider-right-btn {
+  left: auto;
+  right: 1.6rem;
+}

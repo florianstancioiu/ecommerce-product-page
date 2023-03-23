@@ -1,0 +1,19 @@
+.wrapper {
+  padding: 0 2.5rem;
+}
+
+.company-title {
+  color: var(--orange);
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+.title {
+  color: var(--very-dark-blue);
+  margin-bottom: 2.8rem;
+}
+
+.description {
+  color: var(--dark-grayish-blue);
+}

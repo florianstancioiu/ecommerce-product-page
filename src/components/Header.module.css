@@ -1,0 +1,30 @@
+.header {
+  background-color: var(--white);
+  padding: 2.4rem;
+}
+
+.left-side,
+.right-side {
+  display: inline-flex;
+}
+
+.right-side {
+  float: right;
+}
+
+.menu-icon {
+  margin-right: 1.6rem;
+}
+
+.avatar {
+  max-width: 2.4rem;
+  max-height: 2.4rem;
+  margin-left: 2.3rem;
+}
+
+.menu-icon,
+.logo,
+.cart-icon,
+.avatar {
+  cursor: pointer;
+}
