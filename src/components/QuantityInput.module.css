@@ -1,0 +1,29 @@
+.wrapper {
+  margin: 2.6rem 0;
+  background-color: var(--light-grayish-blue);
+  position: relative;
+}
+
+.icon-minus,
+.icon-plus {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 2.4rem;
+  cursor: pointer;
+}
+
+.icon-plus {
+  left: auto;
+  right: 2.4rem;
+}
+
+.input {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  background-color: transparent;
+  border: none;
+  height: 5.8rem;
+  font-weight: 700;
+}

@@ -15,7 +15,7 @@ const TextDesc = () => {
       </p>
       <Price current='$125.00' discount='50%' initial='$250.00' />
       <QuantityInput />
-      <MainBtn title='Add to cart' />
+      <MainBtn title='Add to cart' withIcon />
     </div>
   );
 };
