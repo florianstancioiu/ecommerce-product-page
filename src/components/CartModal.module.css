@@ -46,9 +46,19 @@
 }
 
 @media screen and (min-width: 1111px) {
+  .cart-wrapper {
+    width: 1110px;
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%, -50%);
+    top: 0;
+  }
+
   .cart {
     max-width: 360px;
-    left: calc(100% - 1110px + 360px);
+    left: auto;
+    right: 0;
     top: 100px;
   }
 }

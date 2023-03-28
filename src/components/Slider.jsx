@@ -2,9 +2,13 @@ import { useState } from 'react';
 
 import classes from './Slider.module.css';
 import ProductOneImg from '../images/image-product-1.jpg';
+import ProductOneThumb from '../images/image-product-1-thumbnail.jpg';
 import ProductTwoImg from '../images/image-product-2.jpg';
+import ProductTwoThumb from '../images/image-product-2-thumbnail.jpg';
 import ProductThreeImg from '../images/image-product-3.jpg';
+import ProductThreeThumb from '../images/image-product-3-thumbnail.jpg';
 import ProductFourImg from '../images/image-product-4.jpg';
+import ProductFourThumb from '../images/image-product-4-thumbnail.jpg';
 import IconNext from '../images/icon-next.svg';
 import IconPrevious from '../images/icon-previous.svg';
 
@@ -13,21 +17,25 @@ const Slider = () => {
     {
       id: 1,
       url: ProductOneImg,
+      thumb: ProductOneThumb,
       active: true,
     },
     {
       id: 2,
       url: ProductTwoImg,
+      thumb: ProductTwoThumb,
       active: false,
     },
     {
       id: 3,
       url: ProductThreeImg,
+      thumb: ProductThreeThumb,
       active: false,
     },
     {
       id: 4,
       url: ProductFourImg,
+      thumb: ProductFourThumb,
       active: false,
     },
   ]);
@@ -100,7 +108,7 @@ const Slider = () => {
                 updateImages();
               }}
               key={thumbsIndex}
-              src={item.url}
+              src={item.thumb}
               className={imgClasses}
             />
           );
