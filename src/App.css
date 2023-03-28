@@ -23,9 +23,14 @@ body {
 }
 
 @media screen and (min-width: 1111px) {
+  body {
+    height: auto;
+    position: relative;
+  }
+
   .main-content {
     max-width: 1110px;
-    margin: 0 auto 130px;
+    margin: 0 auto;
     display: flex;
     padding: 0 50px;
     gap: 128px;

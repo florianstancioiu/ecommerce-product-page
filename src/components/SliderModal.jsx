@@ -1,6 +1,7 @@
+import ReactDOM from 'react-dom';
 import { useState } from 'react';
 
-import classes from './Slider.module.css';
+import classes from './SliderModal.module.css';
 import ProductOneImg from '../images/image-product-1.jpg';
 import ProductOneThumb from '../images/image-product-1-thumbnail.jpg';
 import ProductTwoImg from '../images/image-product-2.jpg';
@@ -11,9 +12,8 @@ import ProductFourImg from '../images/image-product-4.jpg';
 import ProductFourThumb from '../images/image-product-4-thumbnail.jpg';
 import IconNext from '../images/icon-next.svg';
 import IconPrevious from '../images/icon-previous.svg';
-import SliderModal from './SliderModal';
 
-const Slider = () => {
+const SliderModal = ({ imgIndex }) => {
   const [images, setImages] = useState([
     {
       id: 1,
@@ -41,7 +41,6 @@ const Slider = () => {
     },
   ]);
   const [index, setIndex] = useState(0);
-  const [showModal, setShowModal] = useState(false);
 
   //
   const goLeft = () => {
@@ -82,8 +81,8 @@ const Slider = () => {
     });
   };
 
-  return (
-    <>
+  return ReactDOM.createPortal(
+    <div className={classes['slider-wrapper']}>
       <div className={classes.slider}>
         <div className={classes['slider-images']}>
           {images.map((item, imagesIndex) => {
@@ -93,14 +92,7 @@ const Slider = () => {
                 : classes['slider-image'];
 
             return (
-              <img
-                onClick={() => {
-                  setShowModal(true);
-                }}
-                key={imagesIndex}
-                src={item.url}
-                className={imgClasses}
-              />
+              <img key={imagesIndex} src={item.url} className={imgClasses} />
             );
           })}
         </div>
@@ -131,11 +123,9 @@ const Slider = () => {
           <img src={IconNext} alt='' />
         </div>
       </div>
-      {/* 
-      <SliderModal imgIndex={index} />
-      */}
-    </>
+    </div>,
+    document.querySelector('#overlays-root')
   );
 };
 
-export default Slider;
+export default SliderModal;
