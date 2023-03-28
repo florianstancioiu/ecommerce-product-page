@@ -18,12 +18,13 @@
   right: 2.4rem;
 }
 
-.input {
+.quantity {
   display: block;
   margin: 0 auto;
   text-align: center;
   background-color: transparent;
   border: none;
   height: 5.8rem;
+  line-height: 5.8rem;
   font-weight: 700;
 }

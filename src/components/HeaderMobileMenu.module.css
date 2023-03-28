@@ -38,3 +38,9 @@
   font-weight: 700;
   color: var(--very-dark-blue);
 }
+
+@media screen and (min-width: 1111px) {
+  .wrapper {
+    display: none;
+  }
+}

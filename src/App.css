@@ -22,6 +22,14 @@ body {
   font-size: 1.6rem;
 }
 
+@media screen and (min-width: 1111px) {
+  .main-content {
+    max-width: 1110px;
+    margin: 0 auto;
+    display: flex;
+  }
+}
+
 /* Box sizing rules */
 *,
 *::before,

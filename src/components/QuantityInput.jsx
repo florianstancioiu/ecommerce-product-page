@@ -30,7 +30,7 @@ const QuantityInput = () => {
         className={classes['icon-minus']}
         alt=''
       />
-      <input type='text' value={quantity} className={classes.input} />
+      <p className={classes.quantity}>{quantity}</p>
       <img
         onClick={increaseValue}
         src={IconPlus}

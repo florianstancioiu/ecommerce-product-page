@@ -5,6 +5,7 @@
   width: calc(100% - 16px);
   background-color: var(--white);
   border-radius: 8px;
+  box-shadow: 0px 0px 49px -17px rgba(0, 0, 0, 0.75);
 }
 
 .header {
@@ -42,4 +43,12 @@
 
 .item-trash img {
   cursor: pointer;
+}
+
+@media screen and (min-width: 1111px) {
+  .cart {
+    max-width: 360px;
+    left: calc(100% - 1110px + 360px);
+    top: 100px;
+  }
 }
