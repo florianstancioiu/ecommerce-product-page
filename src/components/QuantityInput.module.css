@@ -28,3 +28,9 @@
   line-height: 5.8rem;
   font-weight: 700;
 }
+
+@media screen and (min-width: 1111px) {
+  .wrapper {
+    min-width: 156px;
+  }
+}

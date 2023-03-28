@@ -18,3 +18,16 @@
 .description {
   color: var(--dark-grayish-blue);
 }
+
+@media screen and (min-width: 1111px) {
+  .wrapper {
+    max-width: 444px;
+    margin-bottom: 0;
+  }
+
+  .quantity-btn-wrapper {
+    display: flex;
+    gap: 1.6rem;
+    align-items: center;
+  }
+}

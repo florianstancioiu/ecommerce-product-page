@@ -86,6 +86,26 @@ const Slider = () => {
           );
         })}
       </div>
+      <div className={classes['slider-thumbs']}>
+        {images.map((item, thumbsIndex) => {
+          const imgClasses =
+            thumbsIndex === index
+              ? `${classes['slider-thumb']} ${classes.active}`
+              : classes['slider-thumb'];
+
+          return (
+            <img
+              onClick={() => {
+                setIndex(thumbsIndex);
+                updateImages();
+              }}
+              key={thumbsIndex}
+              src={item.url}
+              className={imgClasses}
+            />
+          );
+        })}
+      </div>
       <div onClick={goLeft} className={classes['slider-left-btn']}>
         <img src={IconPrevious} alt='' />
       </div>

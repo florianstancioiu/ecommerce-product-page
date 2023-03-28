@@ -14,8 +14,10 @@ const TextDesc = () => {
         weather can offer.
       </p>
       <Price current='$125.00' discount='50%' initial='$250.00' />
-      <QuantityInput />
-      <MainBtn title='Add to cart' withIcon />
+      <div className={classes['quantity-btn-wrapper']}>
+        <QuantityInput />
+        <MainBtn title='Add to cart' withIcon />
+      </div>
     </div>
   );
 };

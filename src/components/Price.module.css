@@ -32,3 +32,9 @@
   text-decoration: line-through;
   color: var(--dark-grayish-blue);
 }
+
+@media screen and (min-width: 1111px) {
+  .wrapper {
+    display: block;
+  }
+}

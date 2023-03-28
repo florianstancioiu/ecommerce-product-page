@@ -25,8 +25,11 @@ body {
 @media screen and (min-width: 1111px) {
   .main-content {
     max-width: 1110px;
-    margin: 0 auto;
+    margin: 0 auto 130px;
     display: flex;
+    padding: 0 50px;
+    gap: 128px;
+    align-items: center;
   }
 }
 
