@@ -63,19 +63,4 @@
     justify-content: space-between;
     margin-top: 3rem;
   }
-
-  .slider-thumb {
-    max-width: 92px;
-    max-height: 92px;
-    object-fit: cover;
-    border-radius: 10px;
-    cursor: pointer;
-    border: 2px solid var(--white);
-  }
-
-  .slider-thumb:hover,
-  .slider-thumb.active {
-    border: 2px solid var(--orange);
-    opacity: 0.5;
-  }
 }

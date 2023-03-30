@@ -11,6 +11,7 @@ import ProductFourImg from '../images/image-product-4.jpg';
 import ProductFourThumb from '../images/image-product-4-thumbnail.jpg';
 import IconNext from '../images/icon-next.svg';
 import IconPrevious from '../images/icon-previous.svg';
+import SliderThumb from './SliderThumb';
 import SliderModal from './SliderModal';
 
 const Slider = () => {
@@ -106,20 +107,16 @@ const Slider = () => {
         </div>
         <div className={classes['slider-thumbs']}>
           {images.map((item, thumbsIndex) => {
-            const imgClasses =
-              thumbsIndex === index
-                ? `${classes['slider-thumb']} ${classes.active}`
-                : classes['slider-thumb'];
-
             return (
-              <img
+              <SliderThumb
+                key={thumbsIndex}
+                thumbIndex={thumbsIndex}
+                currentIndex={index}
+                item={item}
                 onClick={() => {
                   setIndex(thumbsIndex);
                   updateImages();
                 }}
-                key={thumbsIndex}
-                src={item.thumb}
-                className={imgClasses}
               />
             );
           })}

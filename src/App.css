@@ -8,6 +8,7 @@
   --grayish-blue: hsl(220, 14%, 75%);
   --light-grayish-blue: hsl(223, 64%, 98%);
   --white: hsl(0, 0%, 100%);
+  --white-for-thumb: hsla(0, 0%, 100%, 70%);
   --black: hsl(0, 0%, 0%);
   --black-for-overlay: hsla(0, 0%, 0%, 75%);
 }

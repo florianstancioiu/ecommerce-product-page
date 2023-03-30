@@ -1,0 +1,29 @@
+@media screen and (min-width: 1111px) {
+  .slider-thumb {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    max-width: 92px;
+    max-height: 92px;
+    object-fit: cover;
+    cursor: pointer;
+    border: 2px solid var(--white);
+  }
+
+  .slider-thumb.active::after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--white-for-thumb);
+    border-radius: 10px;
+  }
+
+  .slider-thumb:hover,
+  .slider-thumb.active {
+    border: 2px solid var(--orange);
+  }
+}
