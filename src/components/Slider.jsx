@@ -128,9 +128,7 @@ const Slider = () => {
           <img src={IconNext} alt='' />
         </div>
       </div>
-      {/* 
-      <SliderModal imgIndex={index} />
-      */}
+      <SliderModal show={showModal} onClose={() => setShowModal(false)} />
     </>
   );
 };

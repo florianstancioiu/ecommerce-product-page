@@ -12,6 +12,7 @@
 
 .slider-image.active {
   display: block;
+  cursor: pointer;
 }
 
 .slider-left-btn,

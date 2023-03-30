@@ -12,8 +12,14 @@ import ProductFourImg from '../images/image-product-4.jpg';
 import ProductFourThumb from '../images/image-product-4-thumbnail.jpg';
 import IconNext from '../images/icon-next.svg';
 import IconPrevious from '../images/icon-previous.svg';
+import IconClose from '../images/icon-close-white.svg';
+import SliderThumb from './SliderThumb';
 
-const SliderModal = ({ imgIndex }) => {
+const SliderModal = ({ show, onClose }) => {
+  if (!show) {
+    return null;
+  }
+
   const [images, setImages] = useState([
     {
       id: 1,
@@ -83,6 +89,7 @@ const SliderModal = ({ imgIndex }) => {
 
   return ReactDOM.createPortal(
     <div className={classes['slider-wrapper']}>
+      <div onClick={onClose} className={classes['slider-overlay']}></div>
       <div className={classes.slider}>
         <div className={classes['slider-images']}>
           {images.map((item, imagesIndex) => {
@@ -95,32 +102,31 @@ const SliderModal = ({ imgIndex }) => {
               <img key={imagesIndex} src={item.url} className={imgClasses} />
             );
           })}
+          <div onClick={goLeft} className={classes['slider-left-btn']}>
+            <img src={IconPrevious} alt='' />
+          </div>
+          <div onClick={goRight} className={classes['slider-right-btn']}>
+            <img src={IconNext} alt='' />
+          </div>
+          <div onClick={onClose} className={classes['slider-close-btn']}>
+            <img src={IconClose} alt='' />
+          </div>
         </div>
         <div className={classes['slider-thumbs']}>
           {images.map((item, thumbsIndex) => {
-            const imgClasses =
-              thumbsIndex === index
-                ? `${classes['slider-thumb']} ${classes.active}`
-                : classes['slider-thumb'];
-
             return (
-              <img
+              <SliderThumb
+                key={thumbsIndex}
+                thumbIndex={thumbsIndex}
+                currentIndex={index}
+                item={item}
                 onClick={() => {
                   setIndex(thumbsIndex);
                   updateImages();
                 }}
-                key={thumbsIndex}
-                src={item.thumb}
-                className={imgClasses}
               />
             );
           })}
-        </div>
-        <div onClick={goLeft} className={classes['slider-left-btn']}>
-          <img src={IconPrevious} alt='' />
-        </div>
-        <div onClick={goRight} className={classes['slider-right-btn']}>
-          <img src={IconNext} alt='' />
         </div>
       </div>
     </div>,
