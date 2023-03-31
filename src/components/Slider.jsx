@@ -20,24 +20,28 @@ const Slider = () => {
       id: 1,
       url: ProductOneImg,
       thumb: ProductOneThumb,
+      altText: 'Ecommerce Product 1 Showcase Image',
       active: true,
     },
     {
       id: 2,
       url: ProductTwoImg,
       thumb: ProductTwoThumb,
+      altText: 'Ecommerce Product 1 Showcase Image',
       active: false,
     },
     {
       id: 3,
       url: ProductThreeImg,
       thumb: ProductThreeThumb,
+      altText: 'Ecommerce Product 1 Showcase Image',
       active: false,
     },
     {
       id: 4,
       url: ProductFourImg,
       thumb: ProductFourThumb,
+      altText: 'Ecommerce Product 1 Showcase Image',
       active: false,
     },
   ]);
@@ -98,6 +102,7 @@ const Slider = () => {
                 onClick={() => {
                   setShowModal(true);
                 }}
+                alt={item.altText}
                 key={imagesIndex}
                 src={item.url}
                 className={imgClasses}

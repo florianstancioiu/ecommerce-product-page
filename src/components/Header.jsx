@@ -16,7 +16,7 @@ const Header = () => {
   const [showCart, setShowCart] = useState(false);
 
   return (
-    <div className={classes.header}>
+    <header className={classes.header}>
       <div className={classes['mobile-menu']}>
         <HeaderMobileMenu
           show={showMobileMenu}
@@ -67,7 +67,7 @@ const Header = () => {
         </div>
         <img className={classes['avatar']} src={AvatarImage} alt='' />
       </div>
-    </div>
+    </header>
   );
 };
 

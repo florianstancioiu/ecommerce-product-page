@@ -9,10 +9,10 @@ const App = () => {
     <>
       <CartProvider>
         <Header />
-        <div className='main-content'>
+        <main className='main-content'>
           <Slider />
           <TextDesc />
-        </div>
+        </main>
       </CartProvider>
     </>
   );

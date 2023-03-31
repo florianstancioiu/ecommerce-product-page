@@ -8,7 +8,7 @@ const SliderThumb = ({ thumbIndex, currentIndex, onClick, item }) => {
 
   return (
     <div onClick={onClick} className={thumbClasses}>
-      <img src={item.thumb} />
+      <img src={item.thumb} alt={`${item.altText} Thumbnail`} />
     </div>
   );
 };
