@@ -11,7 +11,6 @@
   top: 50%;
   transform: translateY(-50%);
   left: 2.4rem;
-  cursor: pointer;
 }
 
 .icon-plus {
@@ -36,6 +35,7 @@
   width: 5.8rem;
   position: relative;
   user-select: none;
+  cursor: pointer;
 }
 
 @media screen and (min-width: 1111px) {
