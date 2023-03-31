@@ -9,13 +9,15 @@ import { CartContext } from '../store/CartContext';
 
 const CartModal = ({ show }) => {
   const cartContext = useContext(CartContext);
-  const { currentQuantity, cartItems, setCartItems } = cartContext;
+  const { cartItems, setCartItems } = cartContext;
   const firstCartItem = cartItems[0] !== undefined ? cartItems[0] : {};
   const totalPrice = () => {
     if (cartItems.length === 0) return 0;
 
+    const quantity = cartItems[0].quantity;
+
     return (
-      parseInt(firstCartItem.price.current.substring(1)) * currentQuantity
+      parseInt(firstCartItem.price.current.substring(1)) * quantity
     ).toFixed(2);
   };
 
