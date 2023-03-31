@@ -2,6 +2,7 @@
   margin: 2.6rem 0;
   background-color: var(--light-grayish-blue);
   position: relative;
+  display: flex;
 }
 
 .icon-minus,
@@ -27,6 +28,14 @@
   height: 5.8rem;
   line-height: 5.8rem;
   font-weight: 700;
+}
+
+.icon-wrapper {
+  display: inline-block;
+  height: 5.8rem;
+  width: 5.8rem;
+  position: relative;
+  user-select: none;
 }
 
 @media screen and (min-width: 1111px) {

@@ -27,19 +27,13 @@ const QuantityInput = () => {
 
   return (
     <div className={classes.wrapper}>
-      <img
-        onClick={decreaseValue}
-        src={IconMinus}
-        className={classes['icon-minus']}
-        alt=''
-      />
+      <div onClick={decreaseValue} className={classes['icon-wrapper']}>
+        <img src={IconMinus} className={classes['icon-minus']} alt='' />
+      </div>
       <p className={classes.quantity}>{currentQuantity}</p>
-      <img
-        onClick={increaseValue}
-        src={IconPlus}
-        className={classes['icon-plus']}
-        alt=''
-      />
+      <div onClick={increaseValue} className={classes['icon-wrapper']}>
+        <img src={IconPlus} className={classes['icon-plus']} alt='' />
+      </div>
     </div>
   );
 };
