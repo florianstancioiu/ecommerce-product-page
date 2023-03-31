@@ -37,4 +37,8 @@
   .wrapper {
     display: block;
   }
+
+  .initial {
+    font-weight: 700;
+  }
 }

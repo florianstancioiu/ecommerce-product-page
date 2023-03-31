@@ -45,6 +45,13 @@
   cursor: pointer;
 }
 
+.empty-cart {
+  margin-top: 55px;
+  text-align: center;
+  font-weight: 700;
+  color: var(--dark-grayish-blue);
+}
+
 @media screen and (min-width: 1111px) {
   .cart-wrapper {
     width: 1110px;

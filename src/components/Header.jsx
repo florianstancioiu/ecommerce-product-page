@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 
 import classes from './Header.module.css';
 import IconMenu from '../images/icon-menu.svg';
@@ -7,8 +7,11 @@ import Logo from '../images/logo.svg';
 import AvatarImage from '../images/image-avatar.png';
 import HeaderMobileMenu from './HeaderMobileMenu';
 import CartModal from './CartModal';
+import { CartContext } from '../store/CartContext';
 
 const Header = () => {
+  const cartContext = useContext(CartContext);
+  const { cartItems } = cartContext;
   const [showMobileMenu, setShowMobileMenu] = useState(false);
   const [showCart, setShowCart] = useState(false);
 
@@ -56,7 +59,11 @@ const Header = () => {
           className={classes['cart-icon-wrapper']}
         >
           <img className={classes['cart-icon']} src={IconCart} alt='' />
-          <span className={classes['cart-count']}>3</span>
+          {cartItems.length !== 0 && (
+            <span className={classes['cart-count']}>
+              {cartItems[0].quantity}
+            </span>
+          )}
         </div>
         <img className={classes['avatar']} src={AvatarImage} alt='' />
       </div>

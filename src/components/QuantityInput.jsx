@@ -1,21 +1,24 @@
+import { useContext } from 'react';
+
 import classes from './QuantityInput.module.css';
 import IconPlus from '../images/icon-plus.svg';
 import IconMinus from '../images/icon-minus.svg';
-import { useState } from 'react';
+import { CartContext } from '../store/CartContext';
 
 const QuantityInput = () => {
-  const [quantity, setQuantity] = useState(0);
+  const cartContext = useContext(CartContext);
+  const { currentQuantity, setCurrentQuantity } = cartContext;
 
   const increaseValue = () => {
-    setQuantity((prev) => {
+    setCurrentQuantity((prev) => {
       let prevValue = parseInt(prev);
       return ++prevValue;
     });
   };
 
   const decreaseValue = () => {
-    if (quantity !== 0) {
-      setQuantity((prev) => {
+    if (currentQuantity !== 0) {
+      setCurrentQuantity((prev) => {
         let prevValue = parseInt(prev);
         return --prevValue;
       });
@@ -30,7 +33,7 @@ const QuantityInput = () => {
         className={classes['icon-minus']}
         alt=''
       />
-      <p className={classes.quantity}>{quantity}</p>
+      <p className={classes.quantity}>{currentQuantity}</p>
       <img
         onClick={increaseValue}
         src={IconPlus}

@@ -1,9 +1,9 @@
 import classes from './MainBtn.module.css';
 import CartIcon from '../images/icon-cart-white.svg';
 
-const MainBtn = ({ title, withIcon }) => {
+const MainBtn = ({ title, withIcon, onClick }) => {
   return (
-    <button type='button' className={classes.wrapper}>
+    <button onClick={onClick} type='button' className={classes.wrapper}>
       {withIcon && (
         <img src={CartIcon} className={classes['cart-icon']} alt='' />
       )}
